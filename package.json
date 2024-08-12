@@ -53,5 +53,8 @@
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
+	},
+	"dependencies": {
+		"NasaPics": "link:C:/Users/harel zohar/Documents/n8n-nodes-starter/nodes/NasaPics"
 	}
 }

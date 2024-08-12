@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      NasaPics:
+        specifier: link:C:/Users/harel zohar/Documents/n8n-nodes-starter/nodes/NasaPics
+        version: link:nodes/NasaPics
     devDependencies:
       '@typescript-eslint/parser':
         specifier: ^7.15.0
