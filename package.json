@@ -1,5 +1,5 @@
 {
-	"name": "n8n-nodes-nasapics",
+	"name": "n8n-nodes-starter",
 	"version": "0.1.0",
 	"description": "n8n node to call NASA's APOD and Mars Rover Photo services.",
 	"keywords": [
@@ -22,7 +22,6 @@
 	"packageManager": "pnpm@9.1.4",
 	"main": "index.js",
 	"scripts": {
-		"preinstall": "npx only-allow pnpm",
 		"build": "tsc && gulp build:icons",
 		"dev": "tsc --watch",
 		"format": "prettier nodes credentials --write",
@@ -36,10 +35,12 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/NasaPicsApi.credentials.js"
+			"dist/credentials/NasaPicsApi.credentials.js",
+			"dist/credentials/FriendGridApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/NasaPics/NasaPics.node.js"
+			"dist/nodes/NasaPics/NasaPics.node.js",
+			"dist/nodes/FriendGrid/FriendGrid.node.js"
 		]
 	},
 	"devDependencies": {
@@ -55,6 +56,7 @@
 		"n8n-workflow": "*"
 	},
 	"dependencies": {
-		"NasaPics": "link:C:/Users/harel zohar/Documents/n8n-nodes-starter/nodes/NasaPics"
+		"n8n-core": "*",
+		"request": "*"
 	}
 }
